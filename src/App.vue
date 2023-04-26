@@ -1,0 +1,29 @@
+<script>
+import AppHeader from './components/AppHeader.vue';
+export default {
+  name: "AppVue",
+  components: {
+    AppHeader,
+  },
+  data() {
+    return {
+      navBarLink: {
+        "Home": ["esempio1", "esempio2"],
+        "Pages": ["esempio1", "esempio2"],
+        "Courses": ["esempio1", "esempio2"],
+        "Features": ["esempio1", "esempio2"],
+        "Blog": ["esempio1", "esempio2"],
+        "Shop": ["esempio1", "esempio2"]
+      },
+    }
+  }
+}
+</script>
+
+<template>
+  <AppHeader :navLink="navBarLink" />
+</template>
+
+<style lang="scss">
+@use "./scss/general.scss";
+</style>
