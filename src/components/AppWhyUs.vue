@@ -1,12 +1,52 @@
 <script>
 export default {
     name: "AppWhyUs",
+    data() {
+        return {
+            currItem: 0,
+            testimonialArray: [
+                {
+                    name: "madley pondor",
+                    occupation: "IT Specialist",
+                    img: "01.jpg",
+                    title: "Professional team of specialists and passionate mentors at reach",
+                    description: "I need to get a certification for English profiency and MaxCoach is my best choice. Their tutors are smart and professional whe dealing with students."
+                },
+                {
+                    name: "mina hollace",
+                    occupation: "Freelancer",
+                    img: "02.jpg",
+                    title: "A back-end Developer work to hard",
+                    description: "I need to get a certification for CSS and JS and MaxCoach is my best choice."
+                },
+                {
+                    name: "john dela vega",
+                    occupation: "Boolean Teacher",
+                    img: "03.jpg",
+                    title: "The MaxCoach team works really hard to ensure high level of quality",
+                    description: "I am happy with their arrangement of lessons and subjects. They have a great professionality and we all have time to laugh toghether."
+                }
+            ]
+        }
+    },
+    methods: {
+        getImgPath(imgName) {
+            return new URL(`../images/testimonial-avata-${imgName}`, import.meta.url).href;
+        },
+        isActive(index) {
+            if (index === this.currItem) {
+                return true;
+            }
+            return false
+        }
+    }
 }
 </script>
 
 <template>
     <div class="body">
         <div class="ms_container">
+            <!-- TOP SIDE SECTION -->
             <div class="container">
                 <div class="row">
                     <div class="col-5">
@@ -20,9 +60,29 @@ export default {
                             <span class="card-footer"><a href="#">View all &rightarrow;</a></span>
                         </div>
                     </div>
-                    <div class="col-7">dsadsada</div>
+                    <div class="col-7">
+                        <div v-for="(item, index) in       testimonialArray      " :key="index"
+                            class="testimonial-container" @click="currItem = index"
+                            :class="{ 'is-active': isActive(index) }">
+                            <section class="text">
+                                <h2>{{ item.title }}</h2>
+                                <p>
+                                    {{ item.description }}
+                                </p>
+                            </section>
+                            <section class="user-info d-flex">
+                                <img class="rounded-circle" :src="getImgPath(item.img)" alt="">
+
+                                <div class="user-txt">
+                                    <h2>{{ item.name }}</h2>
+                                    <span>/{{ item.occupation }}</span>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <!-- /TOP SIDE SECTION -->
         </div>
     </div>
 </template>
@@ -41,6 +101,74 @@ export default {
 
     .ms_container {
         padding-top: 3rem;
+
+        .text-heading {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    div.col-7 {
+        position: relative;
+    }
+
+    .testimonial-container {
+        box-shadow: 10px 10px 56px -9px rgba(0, 0, 0, 0.75);
+        background-color: white;
+        border-radius: 6px;
+        padding: 1rem;
+        width: 80%;
+        height: 50%;
+        margin: 0 auto;
+        opacity: .7;
+        cursor: pointer;
+
+        h2 {
+            font-size: .9rem;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: .8rem;
+
+        }
+
+        .user-info {
+            img {
+                width: 10%;
+            }
+
+            .user-txt {
+                margin-left: .6rem;
+
+                h2 {
+                    text-transform: uppercase;
+                    font-size: .5rem;
+                    font-weight: 700;
+                    margin-bottom: 0;
+                }
+
+                span {
+                    font-size: .6rem;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        //handle hover
+        &.is-active {
+            height: 180px;
+            position: absolute;
+            opacity: initial;
+            z-index: 2;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(1.2);
+            cursor: context-menu;
+        }
     }
 }
 </style>
