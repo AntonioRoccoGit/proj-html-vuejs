@@ -16,9 +16,10 @@ export default {
 @use "../scss/partials/constant.scss" as *;
 
 .jumbo {
-    height: 380px;
+    padding: 9rem 0;
     background-image: url("../images/home-3-hero-bg.jpg");
-    background-size: 100%;
+    background-color: $my_input_bg_grey;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     color: white;
     text-align: center;
