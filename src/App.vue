@@ -1,9 +1,11 @@
 <script>
 import AppHeader from './components/AppHeader.vue';
+import AppJumbo from './components/AppJumbo.vue';
 export default {
   name: "AppVue",
   components: {
     AppHeader,
+    AppJumbo
   },
   data() {
     return {
@@ -22,6 +24,7 @@ export default {
 
 <template>
   <AppHeader :navLink="navBarLink" />
+  <AppJumbo />
 </template>
 
 <style lang="scss">

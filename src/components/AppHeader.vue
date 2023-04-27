@@ -52,9 +52,6 @@ export default {
 <style scoped lang="scss">
 @use "../scss/partials/constant.scss" as *;
 
-
-
-
 header {
     height: $header_height;
     color: $my_font_blue;
