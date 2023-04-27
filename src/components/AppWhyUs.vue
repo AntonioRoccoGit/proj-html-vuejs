@@ -49,6 +49,7 @@ export default {
             <!-- TOP SIDE SECTION -->
             <div class="container">
                 <div class="row">
+                    <!-- left side -->
                     <div class="col-5">
                         <div class="text-heading">
                             <h2>testimonials</h2>
@@ -60,6 +61,9 @@ export default {
                             <span class="card-footer"><a href="#">View all &rightarrow;</a></span>
                         </div>
                     </div>
+                    <!-- /left side -->
+
+                    <!-- right side -->
                     <div class="col-7">
                         <div v-for="(item, index) in       testimonialArray      " :key="index"
                             class="testimonial-container" @click="currItem = index"
@@ -80,9 +84,34 @@ export default {
                             </section>
                         </div>
                     </div>
+                    <!-- /right side -->
+
                 </div>
             </div>
             <!-- /TOP SIDE SECTION -->
+
+            <!-- BOTTOM SIDE SECTION -->
+            <div class="container">
+                <div class="row ms_row">
+                    <div class="col-7">
+                        <img class="pois-pat" src="../images/maxcoach-shape-05.png" alt="">
+                        <img src="../images/home-3-team-image.png" alt="">
+                    </div>
+                    <div class="col-5">
+                        <div class="text-heading">
+                            <h2>everything in <span>maxcoach</span></h2>
+                            <h3>We're Here To <span>Transform</span> You!</h3>
+                            <p>
+                                As learners, people can enjoy great companionship from MaxCoach mentors and educators. We
+                                can help you develop and grow your best.
+                            </p>
+                            <span class="card-footer"><a href="#">Get Free Guide</a></span>
+                            <div class="rounded-circle ms_circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /BOTTOM SIDE SECTION -->
         </div>
     </div>
 </template>
@@ -101,6 +130,7 @@ export default {
 
     .ms_container {
         padding-top: 3rem;
+        padding-bottom: 4rem;
 
         .text-heading {
             height: 100%;
@@ -121,9 +151,10 @@ export default {
         border-radius: 6px;
         padding: 1rem;
         width: 80%;
-        height: 50%;
+        height: 180px;
+
         margin: 0 auto;
-        opacity: .7;
+        opacity: .4;
         cursor: pointer;
 
         h2 {
@@ -137,6 +168,7 @@ export default {
         }
 
         .user-info {
+
             img {
                 width: 10%;
             }
@@ -160,15 +192,53 @@ export default {
 
         //handle hover
         &.is-active {
-            height: 180px;
             position: absolute;
             opacity: initial;
             z-index: 2;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%) scale(1.2);
+
             cursor: context-menu;
         }
     }
+
+    .ms_row {
+        padding-top: 4rem;
+
+        .col-7 {
+            .pois-pat {
+                position: absolute;
+                width: 100px;
+                top: 100px;
+                left: -50px;
+            }
+
+            img {
+                width: 90%;
+            }
+        }
+
+        .col-5 {
+            .card-footer {
+                background-color: $my_bg_green;
+                padding: .3rem 1.2rem;
+                border-radius: 4px;
+
+                a {
+                    color: white;
+                    border: none;
+                }
+
+
+            }
+        }
+    }
+
+}
+
+.text-heading .rounded-circle.ms_circle {
+    right: unset;
+    left: 0;
 }
 </style>
