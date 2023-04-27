@@ -6,6 +6,7 @@
 ul {
     margin: 0;
     padding: 0;
+    list-style-type: none;
 }
 
 a {
@@ -21,7 +22,7 @@ img {
 .ms_container {
     max-width: 80%;
     margin: 0 auto;
-    max-width: 1100;
+    max-width: 900px;
 }
 
 .rounded-circle.ms_circle {
@@ -29,4 +30,50 @@ img {
     width: 35px;
     border: 4px solid;
     border-color: $circle_border;
+}
+
+.text-heading {
+    padding: .2rem .4rem;
+    position: relative;
+
+    h2 {
+        text-transform: uppercase;
+        font-size: .6rem;
+        color: $main_section__card;
+
+        span {
+            font-weight: 800;
+        }
+    }
+
+    h3 {
+        font-size: 1.6rem;
+        font-weight: 700;
+
+        span {
+            color: $my_font_green;
+            font-weight: 400;
+        }
+    }
+
+    p {
+        font-size: .6rem;
+    }
+
+    .card-footer {
+        font-size: .6rem;
+
+        a {
+            color: $my_font_green;
+            padding-bottom: .1rem;
+            border-bottom: 1px solid;
+            font-weight: 600;
+        }
+    }
+
+    .rounded-circle.ms_circle {
+        position: absolute;
+        top: -6px;
+        right: 0;
+    }
 }

@@ -2,12 +2,14 @@
 import AppHeader from './components/AppHeader.vue';
 import AppJumbo from './components/AppJumbo.vue';
 import AppMainSection from './components/AppMainSection.vue';
+import AppWhyUs from './components/AppWhyUs.vue';
 export default {
   name: "AppVue",
   components: {
     AppHeader,
     AppJumbo,
-    AppMainSection
+    AppMainSection,
+    AppWhyUs
   },
   data() {
     return {
@@ -28,6 +30,7 @@ export default {
   <AppHeader :navLink="navBarLink" />
   <AppJumbo />
   <AppMainSection />
+  <AppWhyUs />
 </template>
 
 <style lang="scss">
