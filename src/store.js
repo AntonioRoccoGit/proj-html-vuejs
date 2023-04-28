@@ -9,6 +9,23 @@ export const store = reactive({
         "Blog": ["esempio1", "esempio2"],
         "Shop": ["esempio1", "esempio2"]
     },
+    footerLink: [
+        {
+            name: "Address",
+            address: "382 NE 191st St # 87394 Miami, FL 33179-3899",
+            number: "+1(305) 547-9909 (9am - 5pm EST,Monday-Friday)",
+            mail: "support@maxcoach.com"
+        },
+        {
+            name: "Explore",
+            link: ["Start here", "Blog", "About us", "Sucess story", "Courses", "Contact us"],
+
+        },
+        {
+            name: "Information",
+            link: ["Membership", "Purchase guide", "Privacy policy", "Terms of service"]
+        }
+    ],
     carouselImgArray: [
         {
             img: "03-480x298.jpg",

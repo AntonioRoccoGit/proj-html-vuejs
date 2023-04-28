@@ -5,6 +5,7 @@ import AppMainSection from './components/AppMainSection.vue';
 import AppWhyUs from './components/AppWhyUs.vue';
 import AppOurBlog from './components/AppOurBlog.vue';
 import AppNewsLetter from './components/AppNewsLetter.vue';
+import AppFooter from './components/AppFooter.vue';
 import { store } from "./store";
 export default {
   name: "AppVue",
@@ -14,7 +15,8 @@ export default {
     AppMainSection,
     AppWhyUs,
     AppOurBlog,
-    AppNewsLetter
+    AppNewsLetter,
+    AppFooter
   },
   data() {
     return {
@@ -31,6 +33,7 @@ export default {
   <AppWhyUs />
   <AppOurBlog />
   <AppNewsLetter />
+  <AppFooter :navFooter="store.footerLink" />
 </template>
 
 <style lang="scss">
