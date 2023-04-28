@@ -4,6 +4,7 @@ import AppJumbo from './components/AppJumbo.vue';
 import AppMainSection from './components/AppMainSection.vue';
 import AppWhyUs from './components/AppWhyUs.vue';
 import AppOurBlog from './components/AppOurBlog.vue';
+import AppNewsLetter from './components/AppNewsLetter.vue';
 import { store } from "./store";
 export default {
   name: "AppVue",
@@ -12,7 +13,8 @@ export default {
     AppJumbo,
     AppMainSection,
     AppWhyUs,
-    AppOurBlog
+    AppOurBlog,
+    AppNewsLetter
   },
   data() {
     return {
@@ -28,6 +30,7 @@ export default {
   <AppMainSection />
   <AppWhyUs />
   <AppOurBlog />
+  <AppNewsLetter />
 </template>
 
 <style lang="scss">
