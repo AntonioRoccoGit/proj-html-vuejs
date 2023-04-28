@@ -45,5 +45,28 @@ export const store = reactive({
             lessons: "1 month",
             students: 1200
         },
+    ],
+    ourBlogsImgArray: [
+        {
+            img: "03-480x325.jpeg",
+            type: "artist",
+            title: "Pocket-Sized Notebooks Hold Miniature Paintings",
+            date: "May 15, 2020",
+            views: 603
+        },
+        {
+            img: "01-480x325.jpg",
+            type: "artist",
+            title: "Brush Strokes Energize Trees in Paintings",
+            date: "May 15, 2020",
+            views: 688
+        },
+        {
+            img: "02-480x325.jpg",
+            type: "artist",
+            title: "Connection Between Self-Portraits and Identify",
+            date: "May 15, 2020",
+            views: 397
+        },
     ]
 });

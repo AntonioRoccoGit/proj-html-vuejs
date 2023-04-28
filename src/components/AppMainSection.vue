@@ -104,6 +104,11 @@ export default {
                     </div>
                     <!-- /header -->
                     <Carousel />
+                    <p class="carousel-foot mt-4">
+                        Control your personal preference settings to get notified about appropiate courses. <span> <a
+                                href="">View all
+                                courses &rightarrow;</a></span>
+                    </p>
 
                 </section>
                 <!-- /CAROUSEL -->
@@ -215,6 +220,16 @@ export default {
     .carousel {
         text-align: center;
         padding-top: 4rem;
+
+        .carousel-foot {
+            margin: 0 auto;
+            width: 50%;
+
+            span {
+                font-weight: 700;
+                border-bottom: 1px solid $input_placeholder_grey;
+            }
+        }
     }
 
     // BOTTOM WAVE

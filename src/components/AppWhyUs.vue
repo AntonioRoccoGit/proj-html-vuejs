@@ -94,6 +94,7 @@ export default {
             <div class="container">
                 <div class="row ms_row">
                     <div class="col-7">
+                        <img class="square-pat" src="../images/maxcoach-shape-07.png" alt="">
                         <img class="pois-pat" src="../images/maxcoach-shape-05.png" alt="">
                         <img src="../images/home-3-team-image.png" alt="">
                     </div>
@@ -204,6 +205,7 @@ export default {
 
     .ms_row {
         padding-top: 4rem;
+        padding-bottom: 3rem;
 
         .col-7 {
             .pois-pat {
@@ -211,6 +213,14 @@ export default {
                 width: 100px;
                 top: 100px;
                 left: -50px;
+            }
+
+            .square-pat {
+                width: 100px;
+                position: absolute;
+                bottom: -60px;
+                right: 180px;
+                z-index: -1;
             }
 
             img {
