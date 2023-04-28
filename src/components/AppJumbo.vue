@@ -17,6 +17,8 @@ export default {
 
 .jumbo {
     padding: 9rem 0;
+    margin: 0 auto;
+    max-width: 1400px;
     background-image: url("../images/home-3-hero-bg.jpg");
     background-color: $my_input_bg_grey;
     background-size: 100% 100%;

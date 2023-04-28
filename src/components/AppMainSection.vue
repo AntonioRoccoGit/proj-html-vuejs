@@ -1,6 +1,10 @@
 <script>
+import Carousel from './Carousel.vue';
 export default {
-    name: "AppMainSection"
+    name: "AppMainSection",
+    components: {
+        Carousel
+    }
 }
 </script>
 
@@ -99,13 +103,7 @@ export default {
                         <h3>Latest Online <span>Courses</span></h3>
                     </div>
                     <!-- /header -->
-                    <div class="container">
-                        <div class="row row-cols-3">
-                            <div class="col">cccc</div>
-                            <div class="col">ccccc</div>
-                            <div class="col">ccccc</div>
-                        </div>
-                    </div>
+                    <Carousel />
 
                 </section>
                 <!-- /CAROUSEL -->

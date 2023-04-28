@@ -3,6 +3,7 @@ import AppHeader from './components/AppHeader.vue';
 import AppJumbo from './components/AppJumbo.vue';
 import AppMainSection from './components/AppMainSection.vue';
 import AppWhyUs from './components/AppWhyUs.vue';
+import { store } from "./store";
 export default {
   name: "AppVue",
   components: {
@@ -13,21 +14,14 @@ export default {
   },
   data() {
     return {
-      navBarLink: {
-        "Home": ["esempio1", "esempio2"],
-        "Pages": ["esempio1", "esempio2"],
-        "Courses": ["esempio1", "esempio2"],
-        "Features": ["esempio1", "esempio2"],
-        "Blog": ["esempio1", "esempio2"],
-        "Shop": ["esempio1", "esempio2"]
-      },
+      store
     }
   }
 }
 </script>
 
 <template>
-  <AppHeader :navLink="navBarLink" />
+  <AppHeader :navLink="store.navBarLink" />
   <AppJumbo />
   <AppMainSection />
   <AppWhyUs />
